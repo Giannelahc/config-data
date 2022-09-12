@@ -52,6 +52,13 @@ feign:
     enabled: true
 management:
   endpoints:
+    jmx:
+      exposure:
+        include: "*"
     web:
       exposure:
         include: "*"
+      base-path: "/actuator"
+      cors:
+        allowed-origins: true 
+    
